@@ -1,0 +1,4 @@
+<div class="container">
+  <app-conect-list-header (add)="onAddConect($event)"></app-conect-list-header>
+  <app-conect-list (remove)="onDeleteConect($event)" [conectsList]="conects"></app-conect-list>
+</div>

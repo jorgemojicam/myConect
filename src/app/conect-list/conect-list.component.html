@@ -1,0 +1,15 @@
+<div class="container">
+  <section class="main" *ngIf="conectsList.length > 0">
+    <div class="row">
+      <div *ngFor="let conn of conectsList" class="col-lg-4">
+          <div *ngIf="conn.type ==1">
+              <iframe style="width: 100%" [src]="conn.url | SafeUrlPipe"></iframe>
+          </div>
+          <div *ngIf="conn.type ==0">
+              <img  [src]="conn.url">
+          </div>
+        <button class="btn btn-danger" (click)="onDeleteConnectListen(conn)">Eliminar</button>
+      </div>
+    </div>
+  </section>
+</div>
